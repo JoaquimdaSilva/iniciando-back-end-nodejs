@@ -7,7 +7,7 @@ interface CreateAppointmentDTO {
 }
 
 class AppointmentsRepository{
-    private appointments: Appointment[];   
+    private appointments: Appointment[];
 
     constructor(){
         this.appointments = [];
@@ -18,7 +18,7 @@ class AppointmentsRepository{
     }
 
     public findByDate(date: Date): Appointment | null {
-        const findAppointment = this.appointments.find(appointment => 
+        const findAppointment = this.appointments.find(appointment =>
             isEqual(date, appointment.date),
         );
 
